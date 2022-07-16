@@ -38,7 +38,7 @@ const getVideos = async (req,res) =>{
 
 const getVideosbyFilter = async(req,res) =>{
     try{
-        let data = req.body.title;
+        let data = req.query.title;
         let filter = {};
 
         if (data != null){

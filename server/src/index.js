@@ -2,6 +2,9 @@ const express = require("express");
 var bodyParser = require('body-parser');
 const route = require('./route/route.js');
 const app = express();
+const cors = require('cors')
+
+app.use(cors())
 
 
 
@@ -17,6 +20,6 @@ mongoose.connect("mongodb+srv://Abhishek0186:7SIIHhKFk1Vsyl1o@thoriumbackend.izy
 
 app.use('/', route);
 
-app.listen(process.env.PORT || 3000, function() {
-	console.log('Express app running on port ' + (process.env.PORT || 3000))
+app.listen(process.env.PORT || 5000, function() {
+	console.log('Express app running on port ' + (process.env.PORT || 5000))
 });
